@@ -3,8 +3,6 @@ import setuptools
 
 import random_data as lib
 
-packages = ["random_data"] # Название плагина
-
 
 
 
@@ -21,11 +19,9 @@ setuptools.setup(
     version=lib.__version__,
     author=lib.__author__,
     author_email="strelok.127@yandex.ru",
-    packages=packages,
     include_package_data=True,
     python_requires=">=3.5",
     install_requires=requires,
-    zip_safe=False,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -37,4 +33,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3.8",
     ],
     project_urls={"Source": lib.__source__},
+    packages=setuptools.find_packages(),
 )
