@@ -1,6 +1,4 @@
-from .etc import *
-
-# import russian
+from . import etc
 from . import russian
 
 

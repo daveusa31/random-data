@@ -12,7 +12,7 @@ import random_data
 
 print(random_data.russian.names.male()) # Получаем мужское имя
 
-print(random_data.password()) # Пароль из букв и цифр. Можно указать нужную длину
+print(random_data.etc.password()) # Пароль из букв и цифр. Можно указать нужную длину
 # c помощью аргумента length
 
 ```

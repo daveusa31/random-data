@@ -1,6 +1,6 @@
 from .. import functions
 
-male_surnames = ["Никифоров", "Бородкин"]
+male_surnames = ["Никифоров", "Бородкин", "Иванов"]
 
 
 def male():
