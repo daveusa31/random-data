@@ -1,5 +1,9 @@
 # Random-data
 
+[![PyPi Package Version](https://img.shields.io/pypi/v/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
+[![PyPi status](https://img.shields.io/pypi/status/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
+[![Downloads](https://img.shields.io/pypi/dm/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
+[![Supported python versions](https://img.shields.io/pypi/pyversions/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
 
 
 ## Установка и использование:
