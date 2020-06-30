@@ -11,7 +11,10 @@ pip install random-data
 import random_data
 
 print(random_data.russian.names.male()) # Получаем мужское имя
-print(random_data.russian.surnames.male()) # Получаем женское имя
+print(random_data.russian.surnames.male()) # Получаем мужскую фамилию
+
+print(random_data.russian.names.female()) # Получаем женское имя
+print(random_data.russian.surnames.male()) # Получаем женскую фамилию
 
 print(random_data.etc.uuid()) # Генерируем uuid
 print(random_data.etc.password()) # Пароль из букв и цифр. Можно указать нужную длину
