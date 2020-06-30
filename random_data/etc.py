@@ -31,3 +31,13 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
 
 
     return password
+
+
+def uuid(parts=4, length=4):
+    uuid = ""
+
+    for i in range(parts):
+        uuid += password(length=length, upper=False) + "-"
+
+    uuid = uuid.strip("-")
+    return uuid
