@@ -5,7 +5,6 @@ words = "abcdefghinopqrstuvyxwz"
 special_chars = "!?@$"
 
 
-
 def password(length=15, number=True, word=True, special_char=False, upper=True):
     symbols = ""
 
@@ -28,7 +27,6 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
             break
         elif False == special_char:
             break
-
 
     return password
 
