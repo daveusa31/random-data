@@ -28,5 +28,6 @@ class RandomTest(unittest.TestCase):
     def test_length_password_10(self):
         self.assertEqual(len(random_data.etc.password(length=10)), 10)
 
+
 if __name__ == "__main__":
     unittest.main()

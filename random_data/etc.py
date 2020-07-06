@@ -27,7 +27,7 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
             if functions.list_in_string(_password, special_chars):
                 break
             else:
-                continue 
+                continue
 
     return password
 
