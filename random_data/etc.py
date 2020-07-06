@@ -5,7 +5,6 @@ words = "abcdefghinopqrstuvyxwz"
 special_chars = "!?@$"
 
 
-
 def password(length=15, number=True, word=True, special_char=False, upper=True):
     symbols = ""
 
@@ -28,9 +27,9 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
             if functions.list_in_string(_password, special_chars):
                 break
             else:
-                continue 
+                continue
 
-    return _password
+    return password
 
 
 def uuid(parts=4, length=4):
@@ -39,5 +38,5 @@ def uuid(parts=4, length=4):
     for _ in range(parts):
         _uuid += password(length=length, upper=False) + "-"
 
-    _uuid = uuid.strip("-")
+    _uuid = _uuid.strip("-")
     return _uuid
