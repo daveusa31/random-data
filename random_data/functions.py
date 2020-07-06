@@ -7,11 +7,11 @@ def random_element(_list):
 
 
 def list_in_string(_string, _list):
-	response = False
+    response = False
 
-	for i in _list:
-		if i in _string:
-			response = True
-			break
+    for i in _list:
+        if i in _string:
+            response = True
+            break
 
-	return response
+    return response
