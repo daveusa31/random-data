@@ -19,7 +19,7 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
 
     while True:
         _password = ""
-        for i in range(length):
+        for _ in range(length):
             symbol = functions.random_element(symbols)
             _password += symbol
 
