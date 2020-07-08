@@ -23,11 +23,10 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
             symbol = functions.random_element(symbols)
             _password += symbol
 
-        if special_char:
-            if functions.list_in_string(_password, special_chars):
-                break
-            else:
-                continue
+        if functions.list_in_string(_password, special_chars):
+            break
+        if not functions.list_in_string(_password, special_chars):
+            continue
 
     return password
 
