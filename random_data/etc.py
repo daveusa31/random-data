@@ -36,7 +36,6 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
             for _ in range(length)
         )
 
-
         if functions.list_in_string(_password, special_chars):
             break
         if not functions.list_in_string(_password, special_chars):
