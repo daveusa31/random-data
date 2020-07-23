@@ -6,7 +6,6 @@
 [![Downloads](https://pepy.tech/badge/random-data)](https://pepy.tech/project/random-data)
 [![Supported python versions](https://img.shields.io/pypi/pyversions/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
 
-
 ## Установка и использование:
 ```sh 
 pip install random-data
@@ -27,6 +26,5 @@ print(random_data.etc.password()) # Пароль из букв и цифр. Мо
 
 ```
 
-
 # To do
-- [X] Добавить больше русских мужских фамилий 30.06.20
+	- [X] Добавить больше русских мужских фамилий 30.06.20

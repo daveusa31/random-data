@@ -18,24 +18,25 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
     symbols = list(symbols)
 
     while True:
-        _password = ""
-        for i in range(length):
-            symbol = functions.random_element(symbols)
-            _password += symbol
+        _password = "".join(
+            functions.random_element(symbols) 
+            for _ in range(length)
+        )
+
 
         if functions.list_in_string(_password, special_chars):
             break
         if not functions.list_in_string(_password, special_chars):
             continue
 
-    return password
+    return _password
 
 
 def uuid(parts=4, length=4):
-    _uuid = ""
-
-    for _ in range(parts):
-        _uuid += password(length=length, upper=False) + "-"
+    _uuid = "".join(
+        password(length=length, upper=False) + "-" 
+        for _ in range(parts)
+    )
 
     _uuid = _uuid.strip("-")
     return _uuid
