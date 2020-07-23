@@ -5,6 +5,7 @@
 [![PyPi status](https://img.shields.io/pypi/status/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
 [![Downloads](https://pepy.tech/badge/random-data)](https://pepy.tech/project/random-data)
 [![Supported python versions](https://img.shields.io/pypi/pyversions/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
+[![repository size](https://img.shields.io/github/repo-size/daveusa31/random_data)](https://github.com/daveusa31/random_data)
 
 ## Установка и использование:
 ```sh 
