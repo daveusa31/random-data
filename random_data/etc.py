@@ -1,8 +1,21 @@
+from random_user_agent.user_agent import UserAgent
+from random_user_agent.params import SoftwareName, OperatingSystem
+
 from . import functions
 
 numbers = "0123456789"
 words = "abcdefghinopqrstuvyxwz"
 special_chars = "!?@$"
+
+
+_operating_systems = {
+    "windows": OperatingSystem.WINDOWS.value,
+    "linux": OperatingSystem.LINUX.value,
+}
+_software_names = {
+    "chrome": SoftwareName.CHROME.value,
+}
+
 
 
 def password(length=15, number=True, word=True, special_char=False, upper=True):
@@ -40,3 +53,16 @@ def uuid(parts=4, length=4):
 
     _uuid = _uuid.strip("-")
     return _uuid
+
+
+def user_agent(operating_systems=["windows"], software_names=["chrome"]):
+    __software_names = [_software_names[system] for system in software_names]
+    __operating_systems = [_operating_systems[system] for system in operating_systems]
+
+    
+    user_agent_rotator = UserAgent(software_names=__software_names, 
+        operating_systems=__operating_systems, limit=100)
+
+    user_agents = user_agent_rotator.get_user_agents()
+    user_agent = user_agent_rotator.get_random_user_agent()
+    return user_agent
