@@ -17,7 +17,6 @@ _software_names = {
 }
 
 
-
 def password(length=15, number=True, word=True, special_char=False, upper=True):
     symbols = ""
 
@@ -58,10 +57,9 @@ def user_agent(operating_systems=["windows"], software_names=["chrome"]):
     __software_names = [_software_names[system] for system in software_names]
     __operating_systems = [_operating_systems[system] for system in operating_systems]
 
-    
     user_agent_rotator = UserAgent(software_names=__software_names, 
         operating_systems=__operating_systems, limit=100)
 
-    user_agents = user_agent_rotator.get_user_agents()
-    user_agent = user_agent_rotator.get_random_user_agent()
-    return user_agent
+    _user_agent = user_agent_rotator.get_random_user_agent()
+    return _user_agent
+    
