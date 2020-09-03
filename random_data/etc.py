@@ -22,20 +22,17 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
 
     symbols += numbers if number else ""
     symbols += words if word else ""
-    symbols += special_chars if special_char else ""
+    # symbols += special_chars if special_char else ""
 
     if upper:
         symbols = symbols.upper()
 
     symbols = list(symbols)
 
-    while True:
-        _password = "".join(functions.random_element(symbols) for _ in range(length))
 
-        if functions.list_in_string(_password, special_chars):
-            break
-        if not functions.list_in_string(_password, special_chars):
-            continue
+    _password = "".join(functions.random_element(symbols)
+                        for _ in range(length))
+
 
     return _password
 
