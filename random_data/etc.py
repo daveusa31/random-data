@@ -17,7 +17,8 @@ _software_names = {
 }
 
 
-def password(length=15, number=True, word=True, special_char=False, upper=True):
+# def password(length=15, number=True, word=True, special_char=False, upper=True):
+def password(length=15, number=True, word=True, upper=True):
     symbols = ""
 
     symbols += numbers if number else ""
@@ -38,7 +39,10 @@ def password(length=15, number=True, word=True, special_char=False, upper=True):
 
 
 def uuid(parts=4, length=4):
-    _uuid = "".join(password(length=length, upper=False) + "-" for _ in range(parts))
+    _uuid = "".join(
+        password(length=length, upper=False) + "-" 
+        for _ in range(parts)
+    )
 
     _uuid = _uuid.strip("-")
     return _uuid
@@ -46,7 +50,8 @@ def uuid(parts=4, length=4):
 
 def user_agent(operating_systems=["windows"], software_names=["chrome"]):
     __software_names = [_software_names[system] for system in software_names]
-    __operating_systems = [_operating_systems[system] for system in operating_systems]
+    __operating_systems = [_operating_systems[system] 
+                           for system in operating_systems]
 
     user_agent_rotator = UserAgent(
         software_names=__software_names,
