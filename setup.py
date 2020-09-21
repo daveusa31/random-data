@@ -1,8 +1,6 @@
 import os
 import setuptools
 
-import random_data as lib
-
 
 if "requirements.txt" in os.listdir("."):
     with open("requirements.txt", encoding="utf-8") as r:
@@ -12,9 +10,9 @@ else:
 
 
 setuptools.setup(
-    name=lib.name,
-    version=lib.__version__,
-    author=lib.__author__,
+    name="random_data",
+    version="0.1.6",
+    author="daveusa31",
     author_email="strelok.127@yandex.ru",
     include_package_data=True,
     python_requires=">=3.4",
@@ -30,6 +28,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
-    project_urls={"Source": lib.__source__},
+    project_urls={"Source": "https://github.com/daveusa31/random_data"},
     packages=setuptools.find_packages(),
 )
