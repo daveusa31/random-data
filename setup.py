@@ -11,7 +11,7 @@ else:
 
 setuptools.setup(
     name="random_data",
-    version="0.1.6",
+    version="0.1.7",
     author="daveusa31",
     author_email="strelok.127@yandex.ru",
     include_package_data=True,
