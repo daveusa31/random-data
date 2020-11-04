@@ -1,11 +1,12 @@
+import string
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
 
 from . import functions
 
-numbers = "0123456789"
-words = "abcdefghinopqrstuvyxwz"
-special_chars = "!?@$"
+numbers = string.digits
+words = string.ascii_lowercase
+special_chars = string.punctuation
 
 
 _operating_systems = {
