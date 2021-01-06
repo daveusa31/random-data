@@ -1,3 +1,4 @@
+import random
 import string
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
@@ -49,7 +50,7 @@ def uuid(parts=4, length=4):
     return _uuid
 
 
-def user_agent(operating_systems=["windows"], software_names=["chrome"]):
+def user_agent(operating_systems=("windows", ), software_names=("chrome", )):
     __software_names = [_software_names[system] for system in software_names]
     __operating_systems = [_operating_systems[system] 
                            for system in operating_systems]
@@ -62,3 +63,8 @@ def user_agent(operating_systems=["windows"], software_names=["chrome"]):
 
     _user_agent = user_agent_rotator.get_random_user_agent()
     return _user_agent
+
+
+def ip_address():
+    _ip_address = ".".join([str(random.randint(0, 255)) for _ in range(4)])
+    return _ip_address
