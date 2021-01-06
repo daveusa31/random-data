@@ -1,6 +1,7 @@
 # Random-data
 
 [![Build Status](https://travis-ci.com/daveusa31/random-data.svg?branch=master)](https://travis-ci.com/daveusa31/random-data)
+[![codecov](https://codecov.io/gh/daveusa31/random-data/branch/master/graph/badge.svg)](https://codecov.io/gh/daveusa31/random-data)
 [![PyPi Package Version](https://img.shields.io/pypi/v/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
 [![PyPi status](https://img.shields.io/pypi/status/random_data.svg?style=flat-square)](https://pypi.python.org/pypi/random_data)
 [![Downloads](https://pepy.tech/badge/random-data)](https://pepy.tech/project/random-data)
