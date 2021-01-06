@@ -31,8 +31,8 @@ def test_user_agent():
 
 
 def test_ip_address():
-    for _ in range(10):
-        ip_address = random_data.etc.ip_address()
+    for _ in range(5):
+        ip_address = random_data.etc.ip_address(check_on_valid=True)
         url = "http://ip-api.com/json/{}".format(ip_address)
         status = requests.get(url).json()["status"]
         assert "success" == status

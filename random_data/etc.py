@@ -1,5 +1,6 @@
 import random
 import string
+import requests
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
 
@@ -65,6 +66,12 @@ def user_agent(operating_systems=("windows", ), software_names=("chrome", )):
     return _user_agent
 
 
-def ip_address():
+def ip_address(check_on_valid=True):
     _ip_address = ".".join([str(random.randint(0, 255)) for _ in range(4)])
+    if check_on_valid:
+        url = "http://ip-api.com/json/{}".format(_ip_address)
+        status = requests.get(url).json()["status"]
+        if "success" != status:
+            _ip_address = ip_address(check_on_valid=True)
+
     return _ip_address
